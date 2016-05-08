@@ -27,7 +27,7 @@ server.route({
     path: '/webhook',
     handler: function (req, reply) {
         if ( req.query['hub.verify_token'] === 'EAANY771Df8wBANaxIsyrMeiVF3QZB8KtvTZC9boobXYGMZCSPWC02vlfiraWDfIRs4rJTBBG1opF5TqCNZBZCXp3RZBGtCB5oell5DbPAHPVdva5PmhObZAsmkmaeqcM9ubxkk0GgKZCpG5lf6y2oxm8kAK54nZBKVZBZB7xiVZCc61h9wZDZD') {
-            reply.send(req.query('hub.challenge']);
+            reply.send(req.query['hub.challenge'];
         } else {
             reply.send('Error, wrong validation code');
         }
